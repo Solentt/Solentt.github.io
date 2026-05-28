@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad 2 - Arquitectura de Computadoras</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="sidebar-collapsed">
+    <!-- Toggle Button -->
+    <button id="sidebar-toggle" class="sidebar-toggle-btn" aria-label="Toggle Sidebar">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar" id="sidebar">
+        <img src="assets/Inicio/LOGO-TECNM.png" alt="TecNM Logo" style="position: absolute; top: 1.5rem; left: 1.5rem; width: 200px; filter: drop-shadow(0 2px 5px rgba(255,255,255,0.1));">
+        <div class="sidebar-header" style="margin-top: 5rem;">
+            <h2>Arquitectura de computadoras</h2>
+            <span>Instituto Tecnológico de Saltillo</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a></li>
+            <li><a href="unidad1.html"><i class="fa-solid fa-microchip"></i> Unidad 1</a></li>
+            <li><a href="unidad2.html" class="active"><i class="fa-solid fa-memory"></i> Unidad 2</a></li>
+            <li><a href="unidad3.html"><i class="fa-solid fa-network-wired"></i> Unidad 3</a></li>
+            <li><a href="unidad4.html"><i class="fa-solid fa-server"></i> Unidad 4</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content" id="main-content">
+        <h1>Unidad 2: <span class="text-gradient">Estructura y Funcionamiento del Procesador</span></h1>
+
+        <!-- Introducción -->
+        <p><strong>Introducción:</strong> La Unidad Central de Procesamiento (CPU) es uno de los componentes más importantes de una computadora, ya que se encarga de ejecutar instrucciones, procesar datos y coordinar las operaciones internas del sistema. En esta unidad se estudia la organización del procesador, el funcionamiento de los registros internos, el ciclo de instrucción y los distintos modos de direccionamiento utilizados para acceder a la memoria de manera eficiente.</p>
+
+        <!-- 2.1 -->
+        <h2>2.1 Organización del Procesador: El Cerebro del Computador</h2>
+        
+        <p><strong>Definición:</strong> El procesador, también conocido como CPU (Central Processing Unit), es el componente encargado de interpretar y ejecutar las instrucciones de los programas. Su función principal es coordinar las operaciones internas del sistema y procesar la información necesaria para el funcionamiento de la computadora. Para lograrlo, utiliza diferentes componentes internos como registros, buses y unidades de control que trabajan de manera sincronizada.</p>
+        <p><strong>En pocas palabras:</strong> La CPU es el cerebro de la computadora y controla todas las operaciones del sistema.</p>
+
+        <h3>Control Central</h3>
+        <p><strong>Definición:</strong> El procesador actúa como un centro de control que coordina todas las actividades internas del sistema informático. Se encarga de administrar el flujo de datos entre memoria, dispositivos y componentes internos, asegurando que cada operación se ejecute en el momento correcto y en el orden adecuado.</p>
+        <p><strong>De forma simple:</strong> La CPU organiza y coordina todo lo que ocurre dentro de la computadora.</p>
+
+        <h3>Componentes Clave</h3>
+        <p><strong>Definición:</strong> Entre los componentes más importantes del procesador se encuentran los registros visibles para el usuario y los registros de control y estado. Estos elementos permiten almacenar temporalmente información, controlar la ejecución de instrucciones y supervisar el funcionamiento interno del sistema.</p>
+        <p><strong>Más sencillo:</strong> Son las partes internas que ayudan a la CPU a guardar información y controlar procesos.</p>
+
+        <h3>Segmentación (Pipelining)</h3>
+        <p><strong>Definición:</strong> La segmentación o pipelining es una técnica utilizada por los procesadores modernos para mejorar el rendimiento. Consiste en dividir la ejecución de instrucciones en varias etapas independientes, como búsqueda, decodificación y ejecución. Gracias a esto, diferentes instrucciones pueden procesarse al mismo tiempo en distintas fases.</p>
+        <p><strong>Dicho de otra manera:</strong> La CPU divide el trabajo en etapas para ejecutar varias instrucciones simultáneamente.</p>
+
+        <!-- 2.2 -->
+        <h2>2.2 Registros: Pequeñas Memorias Dentro del Procesador</h2>
+        <p><strong>Definición:</strong> Los registros son pequeñas unidades de almacenamiento de alta velocidad ubicadas dentro de la CPU. Su función es guardar temporalmente datos, instrucciones y direcciones de memoria que serán utilizados durante la ejecución de programas. Debido a su rapidez, permiten reducir accesos constantes a la memoria RAM y mejorar el rendimiento general del procesador.</p>
+        <p><strong>En términos simples:</strong> Son memorias muy rápidas dentro del procesador que almacenan información temporal.</p>
+
+        <h3>Velocidad Óptima</h3>
+        <p><strong>Definición:</strong> Los registros ofrecen una velocidad de acceso mucho mayor que la memoria principal, permitiendo que la CPU obtenga información casi de manera inmediata. Gracias a esto, el procesador puede ejecutar operaciones con mayor rapidez y eficiencia.</p>
+        <p><strong>Más sencillo:</strong> Los registros ayudan a que el procesador trabaje mucho más rápido.</p>
+
+        <h3>Tipos de Registros</h3>
+        <p><strong>Definición:</strong> Existen diferentes tipos de registros dependiendo de la función que realizan dentro del procesador. Algunos son visibles para el usuario y almacenan datos o direcciones, mientras que otros controlan el funcionamiento interno de la CPU y la ejecución de instrucciones.</p>
+        <p><strong>En pocas palabras:</strong> Cada registro tiene una función específica dentro del procesador.</p>
+
+        <h3>2.2.1 Registros Visibles para el Usuario</h3>
+        <p><strong>Definición:</strong> Los registros visibles para el usuario son aquellos a los que el programador puede acceder directamente mediante instrucciones del software. Se utilizan principalmente para almacenar datos temporales, direcciones de memoria y resultados de operaciones durante la ejecución de programas.</p>
+        <p><strong>De forma simple:</strong> Son registros que los programas pueden utilizar directamente.</p>
+
+        <h4>Registros de Datos</h4>
+        <p><strong>Definición:</strong> Los registros de datos almacenan información que será utilizada en operaciones matemáticas y lógicas. Algunos procesadores utilizan acumuladores especiales para realizar cálculos y guardar resultados temporales.</p>
+        <p><strong>Más sencillo:</strong> Guardan datos usados en cálculos y operaciones.</p>
+
+        <h4>Registros de Direcciones</h4>
+        <p><strong>Definición:</strong> Estos registros almacenan direcciones de memoria utilizadas para acceder rápidamente a datos y programas. Permiten que la CPU localice información dentro de la memoria principal de manera eficiente.</p>
+        <p><strong>En términos simples:</strong> Guardan ubicaciones de memoria para encontrar información rápidamente.</p>
+
+        <h4>Registros de Índice</h4>
+        <p><strong>Definición:</strong> Los registros de índice facilitan el acceso relativo o indirecto a posiciones de memoria, especialmente en estructuras de datos como arreglos o listas. Algunos pueden incrementarse automáticamente para recorrer datos secuenciales.</p>
+        <p><strong>Dicho de otra manera:</strong> Ayudan a recorrer arreglos y estructuras de datos de forma más rápida.</p>
+
+        <h3>2.2.2 Registros de Control y Estado: El Motor Interno del Procesador</h3>
+        <p><strong>Definición:</strong> Los registros de control y estado supervisan el funcionamiento interno del procesador y participan en la ejecución secuencial de instrucciones. A diferencia de los registros visibles para el usuario, estos trabajan principalmente de forma interna para controlar el flujo de ejecución y la comunicación con memoria.</p>
+        <p><strong>En pocas palabras:</strong> Son registros internos que ayudan a controlar el funcionamiento de la CPU.</p>
+
+        <h4>Contador de Programa (PC)</h4>
+        <p><strong>Definición:</strong> El Contador de Programa almacena la dirección de la siguiente instrucción que será ejecutada por la CPU. Después de ejecutar una instrucción, este registro se actualiza automáticamente para continuar con la secuencia del programa.</p>
+        <p><strong>Más sencillo:</strong> Indica cuál será la próxima instrucción que ejecutará el procesador.</p>
+
+        <h4>Registro de Dirección de Memoria (MAR)</h4>
+        <p><strong>Definición:</strong> El MAR contiene la dirección de memoria a la que la CPU desea acceder, ya sea para leer información o escribir datos en memoria principal.</p>
+        <p><strong>En términos simples:</strong> Guarda la dirección de memoria que la CPU necesita usar.</p>
+
+        <h4>Registro de Instrucción (IR)</h4>
+        <p><strong>Definición:</strong> El Registro de Instrucción almacena temporalmente la instrucción actual que está siendo interpretada y ejecutada por la Unidad de Control del procesador.</p>
+        <p><strong>De forma simple:</strong> Guarda la instrucción que el procesador está ejecutando en ese momento.</p>
+
+        <h4>Registro Intermedio de Memoria (MBR)</h4>
+        <p><strong>Definición:</strong> El Registro Intermedio de Memoria almacena temporalmente los datos que se leen desde memoria o que serán escritos en ella durante el proceso de ejecución.</p>
+        <p><strong>Más sencillo:</strong> Guarda temporalmente los datos que entran o salen de la memoria.</p>
+
+        <h4>Cómo Trabajan Juntos los Registros de Control</h4>
+        <p><strong>Definición:</strong> Los registros de control trabajan de manera coordinada para ejecutar instrucciones correctamente. El PC indica qué instrucción sigue, el IR la interpreta y los registros MAR y MBR gestionan la comunicación entre la CPU y la memoria principal.</p>
+        <p><strong>En pocas palabras:</strong> Todos los registros colaboran para que la CPU ejecute instrucciones ordenadamente.</p>
+
+        <h4>Importancia de los Registros en el Rendimiento del Procesador</h4>
+        <p><strong>Definición:</strong> Los registros son fundamentales para el rendimiento del procesador debido a su alta velocidad de acceso. Permiten ejecutar instrucciones de forma más eficiente y reducen la dependencia de la memoria RAM. Además, arquitecturas como RISC y CISC utilizan diferentes estrategias de registros para optimizar el rendimiento del sistema.</p>
+        <p><strong>Dicho de otra manera:</strong> Los registros hacen que el procesador trabaje más rápido y eficientemente.</p>
+
+        <!-- 2.3 -->
+        <h2>2.3 Ciclo de Instrucciones en la Arquitectura</h2>
+        <p><strong>Definición:</strong> El ciclo de instrucción es la secuencia de pasos que sigue la CPU para ejecutar cada instrucción de un programa. Este proceso también es conocido como ciclo Fetch-Decode-Execute (Búsqueda-Decodificación-Ejecución) y representa el funcionamiento básico de cualquier procesador moderno.</p>
+        <p><strong>En pocas palabras:</strong> Es el proceso que sigue la CPU para ejecutar instrucciones.</p>
+
+        <h3>Etapa 1: Búsqueda de la Instrucción (Fetch)</h3>
+        <p><strong>Definición:</strong> Durante esta etapa, el Contador de Programa envía la dirección de la siguiente instrucción hacia la memoria. Posteriormente, la instrucción es cargada al Registro de Instrucción y el PC se actualiza para apuntar a la siguiente instrucción.</p>
+        <p><strong>Más sencillo:</strong> La CPU busca la siguiente instrucción que debe ejecutar.</p>
+
+        <h3>Etapa 2: Decodificación de la Instrucción (Decode)</h3>
+        <p><strong>Definición:</strong> En esta fase, el decodificador interpreta el código de operación de la instrucción, identifica los operandos involucrados y determina qué acción debe realizar el procesador.</p>
+        <p><strong>De forma simple:</strong> La CPU interpreta y entiende la instrucción recibida.</p>
+
+        <h3>Etapa 3: Ejecución de la Instrucción (Execute)</h3>
+        <p><strong>Definición:</strong> Durante la ejecución, la Unidad de Control genera señales para que la ALU y otros componentes realicen la operación correspondiente. Los resultados obtenidos pueden almacenarse en registros internos o en memoria principal.</p>
+        <p><strong>En términos simples:</strong> La CPU realiza la operación indicada por la instrucción.</p>
+
+        <h3>Ciclo FDE</h3>
+        <p><strong>Definición:</strong> El ciclo Fetch-Decode-Execute funciona de manera continua y sincronizada con el reloj del procesador. Gracias a esta secuencia ordenada, la CPU puede ejecutar millones de instrucciones por segundo de forma eficiente.</p>
+        <p><strong>Más sencillo:</strong> Es el proceso repetitivo que permite a la CPU funcionar constantemente.</p>
+
+        <h3>Segmentación de Instrucciones (Pipelining)</h3>
+        <p><strong>Definición:</strong> La segmentación permite que distintas etapas de diferentes instrucciones se ejecuten simultáneamente, aumentando considerablemente el rendimiento del procesador. Esta técnica funciona de forma similar a una línea de ensamblaje industrial.</p>
+        <p><strong>Dicho de otra manera:</strong> Varias instrucciones pueden procesarse al mismo tiempo en diferentes etapas.</p>
+
+        <h3>Importancia del Ciclo de Instrucción</h3>
+        <p><strong>Definición:</strong> El ciclo de instrucción es fundamental para comprender cómo funcionan los procesadores modernos. Además, sirve como base para estudiar temas avanzados como interrupciones, arquitecturas paralelas, gestión de memoria y optimización de rendimiento.</p>
+        <p><strong>En pocas palabras:</strong> Entender este ciclo ayuda a comprender el funcionamiento interno de la CPU.</p>
+
+        <p style="text-align: center; margin-top: 2rem; font-size: 1.2rem; color: var(--primary-color);">Todas las partes mencionadas del CPU se pueden ver mejor en el siguiente diagrama:</p>
+        <div style="text-align: center; margin-bottom: 3rem;">
+            <img src="assets/Unidad%202/cpu.webp" alt="Diagrama del CPU" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+        </div>
+
+        <!-- 2.4 -->
+        <h2>2.4 Modos de Direccionamiento y Casos de Estudio</h2>
+        <p><strong>Definición:</strong> Los modos de direccionamiento son técnicas utilizadas por el procesador para localizar datos y operandos en memoria o registros. Cada modo ofrece distintas ventajas en velocidad, flexibilidad y eficiencia durante la ejecución de programas.</p>
+        <p><strong>Más sencillo:</strong> Son formas que usa la CPU para encontrar datos e instrucciones.</p>
+
+        <h3>Direccionamiento Inmediato</h3>
+        <p><strong>Definición:</strong> En este modo, el operando se encuentra directamente dentro de la instrucción, evitando accesos adicionales a memoria. Esto permite una ejecución más rápida de ciertas operaciones simples.</p>
+        <p><strong>En términos simples:</strong> El dato viene incluido directamente en la instrucción.</p>
+
+        <h3>Direccionamiento Directo (Absoluto)</h3>
+        <p><strong>Definición:</strong> La instrucción contiene la dirección exacta de memoria donde se encuentra el operando. El procesador utiliza esa dirección para acceder directamente al dato requerido.</p>
+        <p><strong>Más sencillo:</strong> La instrucción indica exactamente dónde está el dato en memoria.</p>
+
+        <h3>Direccionamiento por Registro</h3>
+        <p><strong>Definición:</strong> En este modo, el operando se encuentra almacenado dentro de un registro interno del procesador, proporcionando un acceso extremadamente rápido sin utilizar memoria RAM.</p>
+        <p><strong>De forma simple:</strong> El dato está guardado directamente en un registro del procesador.</p>
+
+        <h3>Direccionamiento Indirecto</h3>
+        <p><strong>Definición:</strong> El direccionamiento indirecto utiliza registros que contienen direcciones de memoria donde realmente se encuentran los datos. Este método es muy utilizado en estructuras dinámicas y manejo de punteros.</p>
+        <p><strong>Dicho de otra manera:</strong> El registro apunta al lugar donde está guardado el dato real.</p>
+
+        <h3>Direccionamiento Indexado y Base + Índice</h3>
+        <p><strong>Definición:</strong> Este modo combina registros base, índices y desplazamientos para acceder eficientemente a arreglos, tablas y estructuras complejas de datos dentro de memoria.</p>
+        <p><strong>En pocas palabras:</strong> Permite acceder fácilmente a posiciones dentro de arreglos y matrices.</p>
+
+        <h3>Caso de Estudio: Heartbleed (2014)</h3>
+        <p><strong>Definición:</strong> Heartbleed fue una vulnerabilidad crítica en OpenSSL causada por un error de direccionamiento y validación de memoria. Este problema permitió leer información sensible de servidores, exponiendo enormes cantidades de datos privados.</p>
+        <p><strong>Más sencillo:</strong> Un error al manejar memoria permitió robar información de millones de servidores.</p>
+
+        <h3>Caso de Estudio: Code Red (2001)</h3>
+        <p><strong>Definición:</strong> El gusano Code Red explotó un desbordamiento de buffer provocado por el uso inseguro de direccionamiento indirecto y manejo incorrecto de memoria en aplicaciones web escritas en lenguaje C.</p>
+        <p><strong>En términos simples:</strong> Un error en memoria permitió que un virus infectara miles de servidores.</p>
+
+        <h3>Caso de Estudio: Memoria Mapeada en ARM Cortex-M</h3>
+        <p><strong>Definición:</strong> Los procesadores ARM Cortex-M utilizan direccionamiento indexado para acceder a periféricos mediante memoria mapeada. Esto permite controlar hardware de manera rápida y eficiente en sistemas embebidos y aplicaciones críticas.</p>
+        <p><strong>Más sencillo:</strong> El procesador usa direcciones especiales para controlar dispositivos de hardware rápidamente.</p>
+
+        <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 3rem 0;">
+
+        <h2>Conclusión de la Unidad 2</h2>
+        <p>El estudio de la estructura y funcionamiento del procesador es esencial para comprender cómo las computadoras interpretan y ejecutan cada una de las instrucciones que conforman los programas y aplicaciones que utilizamos diariamente. Al analizar la organización central, la importancia vital de los registros de control y datos, y las etapas del ciclo Fetch-Decode-Execute, podemos dimensionar la complejidad y velocidad a la que trabajan los sistemas modernos.</p>
+        <p>Asimismo, los distintos modos de direccionamiento demuestran la flexibilidad y optimización con la que los procesadores modernos gestionan la memoria y los recursos. Comprender estas bases arquitectónicas no solo es clave para el diseño de hardware, sino también para el desarrollo de software más eficiente, seguro y capaz de aprovechar al máximo las capacidades del equipo.</p>
+        
+        <h2>Referencias</h2>
+        <div style="display: flex; gap: 2rem; margin-top: 2rem; margin-bottom: 2rem;">
+            <a href="assets/PresentaciónUnidad2.pdf" target="_blank" class="module-card" style="flex: 1; max-width: 400px; text-align: center;">
+                <h3 style="margin-top: 0;"><i class="fa-solid fa-file-pdf"></i> Presentación de la Unidad 2</h3>
+                <p style="margin-bottom: 0;">Haz clic para descargar o visualizar la presentación de esta unidad.</p>
+            </a>
+        </div>
+
+        <footer style="text-align: center; margin-top: 5rem; padding: 2rem 0; border-top: 1px solid rgba(255,255,255,0.1); color: var(--text-secondary);">
+            <p>Contacto: <a href="mailto:Joeleliud15@gmail.com" style="color: var(--primary-color); text-decoration: none;">Joeleliud15@gmail.com</a></p>
+        </footer>
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
+
+
+
+
+
