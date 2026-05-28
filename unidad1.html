@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad 1 - Arquitectura de Computadoras</title>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="sidebar-collapsed">
+    <!-- Toggle Button -->
+    <button id="sidebar-toggle" class="sidebar-toggle-btn" aria-label="Toggle Sidebar">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar" id="sidebar">
+        <img src="assets/Inicio/LOGO-TECNM.png" alt="TecNM Logo" style="position: absolute; top: 1.5rem; left: 1.5rem; width: 200px; filter: drop-shadow(0 2px 5px rgba(255,255,255,0.1));">
+        <div class="sidebar-header" style="margin-top: 5rem;">
+            <h2>Arquitectura de computadoras</h2>
+            <span>Instituto Tecnológico de Saltillo</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a></li>
+            <li><a href="unidad1.html" class="active"><i class="fa-solid fa-microchip"></i> Unidad 1</a></li>
+            <li><a href="unidad2.html"><i class="fa-solid fa-memory"></i> Unidad 2</a></li>
+            <li><a href="unidad3.html"><i class="fa-solid fa-network-wired"></i> Unidad 3</a></li>
+            <li><a href="unidad4.html"><i class="fa-solid fa-server"></i> Unidad 4</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content" id="main-content">
+        <h1>Unidad 1: <span class="text-gradient">Arquitecturas de Cómputo</span></h1>
+
+        <!-- Introducción -->
+        <p><strong>Introducción:</strong> La arquitectura de computadoras es el conjunto de principios, diseños y
+            estructuras que permiten el funcionamiento de un sistema informático. Se encarga de definir cómo trabajan e
+            interactúan los componentes internos de una computadora, incluyendo el procesador, la memoria, los buses y
+            los dispositivos de entrada y salida. Además, establece la forma en que se ejecutan las instrucciones, se
+            procesan los datos y se administran los recursos del sistema.</p>
+
+        <!-- 1.1 -->
+        <h2>1.1 Modelos de Arquitecturas de Cómputo</h2>
+
+        <h3>Clásicas</h3>
+        <p><strong>Definición:</strong> La arquitectura clásica o arquitectura Von Neumann fue propuesta por John Von
+            Neumann en la década de 1940 y es considerada la base de las computadoras modernas. Este modelo utiliza una
+            memoria compartida para almacenar tanto las instrucciones de los programas como los datos que serán
+            procesados. La CPU accede a toda esta información mediante un sistema de buses, ejecutando las instrucciones
+            de manera secuencial. Su diseño permitió simplificar el funcionamiento de las computadoras y facilitar el
+            desarrollo de sistemas informáticos.</p>
+        <p><strong>En pocas palabras:</strong> Los datos y programas se guardan en la misma memoria para que la CPU
+            pueda procesarlos.</p>
+        <div style="text-align: center; margin: 2rem 0;">
+            <img src="assets/Unidad1/1.1 clasicas .png" alt="Arquitectura Clásica"
+                style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+        </div>
+
+        <h3>Segmentadas</h3>
+        <p><strong>Definición:</strong> La arquitectura segmentada, también conocida como Pipeline, divide el
+            procesamiento de instrucciones en diferentes etapas independientes. Cada etapa realiza una parte específica
+            del proceso, permitiendo que varias instrucciones sean ejecutadas simultáneamente en distintas fases. Este
+            método mejora el rendimiento del procesador, ya que aprovecha mejor los recursos internos y reduce el tiempo
+            necesario para ejecutar programas.</p>
+        <p><strong>De forma simple:</strong> El procesador divide el trabajo en partes para ejecutar varias tareas al
+            mismo tiempo.</p>
+        <div style="text-align: center; margin: 2rem 0;">
+            <img src="assets/Unidad1/1.1 Segmentadas.png" alt="Arquitectura Segmentada"
+                style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+        </div>
+
+        <h3>Multiprocesamiento</h3>
+        <p><strong>Definición:</strong> El multiprocesamiento consiste en utilizar dos o más procesadores dentro de un
+            mismo sistema informático para ejecutar múltiples tareas simultáneamente. Este modelo se emplea cuando un
+            solo procesador no es suficiente para manejar grandes cargas de trabajo o procesos complejos. Gracias al
+            multiprocesamiento, las computadoras pueden mejorar su velocidad, eficiencia y capacidad de procesamiento.
+        </p>
+        <p><strong>Dicho de otra manera:</strong> La computadora usa varios procesadores para trabajar más rápido y
+            realizar más tareas al mismo tiempo.</p>
+        <div style="text-align: center; margin: 2rem 0;">
+            <img src="assets/Unidad1/1.1 multiprocesamiento.png" alt="Arquitectura de Multiprocesamiento"
+                style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+        </div>
+
+        <!-- 1.2 -->
+        <h2>1.2 Análisis de los Componentes</h2>
+        <p><strong>Definición:</strong> Los componentes de una computadora son todos los elementos físicos y
+            electrónicos que permiten el funcionamiento del sistema informático. Estos componentes trabajan en conjunto
+            para procesar información, ejecutar programas, almacenar datos y permitir la interacción con el usuario.
+            Algunos componentes se encuentran dentro del gabinete y otros funcionan como dispositivos externos
+            conectados al sistema.</p>
+        <p><strong>En pocas palabras:</strong> Son todas las partes que permiten que una computadora funcione.</p>
+
+        <h3>1.2.1 Arquitecturas</h3>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; margin-bottom: 2rem;">
+            <div style="flex: 1; min-width: 300px;">
+                <h4>Arquitectura RISC</h4>
+                <p><strong>Definición:</strong> La arquitectura RISC (Reduced Instruction Set Computer) es un modelo de
+                    diseño de procesadores que utiliza un conjunto reducido de instrucciones simples y optimizadas. Este
+                    tipo de arquitectura busca que las instrucciones puedan ejecutarse rápidamente, generalmente en un
+                    solo ciclo de reloj. Gracias a esto, los procesadores RISC suelen ofrecer un mejor rendimiento y
+                    eficiencia energética en tareas repetitivas y sistemas modernos.</p>
+                <p><strong>Más sencillo:</strong> Usa instrucciones simples y rápidas para mejorar el rendimiento del
+                    procesador.</p>
+
+                <h4 style="margin-top: 1.5rem;">Arquitectura CISC</h4>
+                <p><strong>Definición:</strong> La arquitectura CISC (Complex Instruction Set Computer) utiliza un
+                    conjunto amplio de instrucciones complejas capaces de realizar varias operaciones en una sola
+                    instrucción. Este modelo facilita la programación y reduce la cantidad de instrucciones necesarias
+                    para ejecutar ciertas tareas. Sin embargo, el procesador requiere una estructura más compleja para
+                    interpretar y ejecutar dichas instrucciones.</p>
+                <p><strong>En términos simples:</strong> Usa instrucciones más complejas para realizar más tareas en
+                    menos pasos.</p>
+            </div>
+            <div style="flex: 1; min-width: 300px; text-align: center;">
+                <img src="assets/Unidad1/1.2.1 RISC Y CISC.png" alt="Arquitecturas RISC y CISC"
+                    style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+            </div>
+        </div>
+
+        <h3>1.2.2 Unidad Central de Procesamiento (CPU)</h3>
+        <p><strong>Definición:</strong> La Unidad Central de Procesamiento o CPU es el componente principal encargado de
+            ejecutar instrucciones y procesar datos dentro de una computadora. Se considera el cerebro del sistema
+            porque coordina todas las operaciones realizadas por los diferentes componentes. Además de ejecutar
+            programas, la CPU administra cálculos matemáticos, operaciones lógicas y el flujo de información dentro del
+            equipo.</p>
+        <p><strong>En pocas palabras:</strong> Es el componente principal que procesa y controla toda la información de
+            la computadora.</p>
+        <div style="text-align: center; margin: 2rem 0;">
+            <img src="assets/Unidad1/1.2.2 CPU.png" alt="Unidad Central de Procesamiento (CPU)"
+                style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+        </div>
+
+        <h4>Unidad Aritmética Lógica (ALU)</h4>
+        <p><strong>Definición:</strong> La Unidad Aritmética Lógica, conocida como ALU, es una sección interna de la CPU
+            especializada en realizar operaciones matemáticas y lógicas. Entre sus funciones se encuentran las sumas,
+            restas, multiplicaciones, comparaciones y operaciones booleanas como AND y OR. Estas operaciones son
+            esenciales para ejecutar instrucciones y resolver procesos dentro del sistema informático.</p>
+        <p><strong>Más sencillo:</strong> Es la parte de la CPU que realiza cálculos y operaciones lógicas.</p>
+        <div style="text-align: center; margin: 2rem 0;">
+            <img src="assets/Unidad1/1.2.2 ALU.png" alt="Unidad Aritmética Lógica (ALU)"
+                style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+        </div>
+
+        <h4>Unidad de Control (UC)</h4>
+        <p><strong>Definición:</strong> La Unidad de Control es el componente de la CPU encargado de coordinar y
+            supervisar todas las operaciones realizadas por la computadora. Su función principal es interpretar las
+            instrucciones almacenadas en memoria y enviar señales de control a los demás componentes para asegurar que
+            cada operación se ejecute correctamente y en el orden adecuado.</p>
+        <p><strong>Dicho de otra manera:</strong> Es la parte del procesador que organiza y controla el funcionamiento
+            de toda la computadora.</p>
+        <div style="text-align: center; margin: 2rem 0;">
+            <img src="assets/Unidad1/1.2.2 UC.png" alt="Unidad de Control (UC)"
+                style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+        </div>
+
+        <h4>Registros</h4>
+        <p><strong>Definición:</strong> Los registros son pequeñas memorias internas ubicadas dentro de la CPU que
+            almacenan temporalmente datos, instrucciones y resultados de operaciones. Debido a su gran velocidad de
+            acceso, permiten que el procesador trabaje de manera más eficiente al reducir el tiempo necesario para
+            obtener información importante durante la ejecución de programas.</p>
+        <p><strong>En términos simples:</strong> Son memorias muy rápidas dentro del procesador donde se guarda
+            información temporal.</p>
+
+        <h4>Buses</h4>
+        <p><strong>Definición:</strong> Los buses son canales de comunicación encargados de transportar datos,
+            instrucciones y señales eléctricas entre los distintos componentes de la computadora. Gracias a ellos, la
+            CPU puede comunicarse con la memoria, dispositivos de almacenamiento y periféricos del sistema.</p>
+        <p><strong>En pocas palabras:</strong> Son las vías por donde viaja la información dentro de la computadora.</p>
+
+
+
+        <!-- 1.3 -->
+        <h2>1.3 Memoria Principal</h2>
+        <p><strong>Definición:</strong> La memoria principal es el espacio de almacenamiento temporal utilizado por la
+            computadora para guardar los datos y programas que están siendo utilizados en ese momento. Esta memoria
+            permite que la CPU acceda rápidamente a la información necesaria para ejecutar procesos y tareas del
+            sistema.</p>
+        <p><strong>Más sencillo:</strong> Es la memoria que usa la computadora mientras está trabajando.</p>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; margin-bottom: 2rem;">
+            <div style="flex: 1; min-width: 300px;">
+                <h3>Memoria RAM</h3>
+                <p><strong>Definición:</strong> La memoria RAM (Random Access Memory) es una memoria principal de acceso
+                    rápido utilizada por la computadora para almacenar temporalmente los datos y programas que están
+                    siendo utilizados en ese momento. Su función principal es permitir que el procesador acceda
+                    rápidamente a la información necesaria para ejecutar aplicaciones y procesos del sistema operativo.
+                    La RAM trabaja de manera constante mientras la computadora está encendida y su contenido se elimina
+                    automáticamente al apagar el equipo, por lo que se considera una memoria volátil.<br><br>La
+                    capacidad y velocidad de la memoria RAM influyen directamente en el rendimiento general de la
+                    computadora, especialmente en tareas multitarea, videojuegos, edición multimedia y aplicaciones
+                    exigentes.</p>
+                <p><strong>En pocas palabras:</strong> Es la memoria temporal donde la computadora guarda la información
+                    que está usando en ese momento para trabajar más rápido.</p>
+
+                <h3 style="margin-top: 1.5rem;">Memoria ROM</h3>
+                <p><strong>Definición:</strong> La memoria ROM (Read Only Memory) es un tipo de memoria permanente
+                    utilizada para almacenar instrucciones esenciales necesarias para el arranque y funcionamiento
+                    básico de la computadora. A diferencia de la RAM, la ROM no pierde su contenido cuando el equipo se
+                    apaga, por lo que se considera una memoria no volátil.<br><br>En esta memoria se almacenan programas
+                    importantes como el BIOS o firmware del sistema, los cuales permiten que la computadora inicie
+                    correctamente y reconozca los componentes de hardware instalados.</p>
+                <p><strong>En pocas palabras:</strong> Es una memoria permanente que guarda instrucciones importantes
+                    para iniciar la computadora.</p>
+            </div>
+            <div style="flex: 1; min-width: 300px; text-align: center;">
+                <img src="assets/Unidad1/1.3 RAM Y ROM.png" alt="Memoria RAM y ROM"
+                    style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+            </div>
+        </div>
+
+        <h3>Memoria Caché</h3>
+        <p><strong>Definición:</strong> La memoria caché es un tipo de memoria de alta velocidad ubicada entre la
+            memoria RAM y el procesador. Su función principal es almacenar temporalmente los datos e instrucciones más
+            utilizados para que la CPU pueda acceder a ellos rápidamente. Esto ayuda a reducir tiempos de espera y
+            mejora significativamente el rendimiento general del sistema.</p>
+        <p><strong>De forma simple:</strong> Es una memoria rápida que ayuda al procesador a encontrar información más
+            rápido.</p>
+        <div style="text-align: center; margin: 2rem 0;">
+            <img src="assets/Unidad1/1.3 Memoria cache.png" alt="Memoria Caché"
+                style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+        </div>
+
+        <!-- 1.4 -->
+        <h2>1.4 Módulos Entrada-Salida (E/S)</h2>
+        <p><strong>Definición:</strong> Los módulos de Entrada y Salida son componentes encargados de controlar la
+            comunicación entre la computadora y los dispositivos externos, como teclados, impresoras, discos duros y
+            monitores. Estos módulos ayudan a gestionar las diferencias de velocidad y formato entre la CPU y los
+            periféricos.</p>
+        <p><strong>En pocas palabras:</strong> Permiten que la computadora se comunique con dispositivos externos.</p>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; margin-bottom: 2rem;">
+            <div style="flex: 1; min-width: 300px;">
+                <h3>E/S Programada</h3>
+                <p><strong>Definición:</strong> La Entrada y Salida programada es un método en el que la CPU controla
+                    directamente las operaciones de transferencia de datos entre la memoria y los dispositivos periféricos.
+                    Durante este proceso, el procesador permanece supervisando constantemente las operaciones de comunicación.
+                </p>
+                <p><strong>Más sencillo:</strong> La CPU controla manualmente el intercambio de información con los
+                    dispositivos.</p>
+            </div>
+            <div style="flex: 1; min-width: 300px; text-align: center;">
+                <img src="assets/Unidad1/1.4 E-S  programada.png" alt="E/S Programada"
+                    style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+            </div>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; margin-bottom: 2rem;">
+            <div style="flex: 1; min-width: 300px;">
+                <h3>E/S Mediante Interrupciones</h3>
+                <p><strong>Definición:</strong> La Entrada y Salida mediante interrupciones permite que los dispositivos
+                    periféricos avisen a la CPU cuando terminan una operación o necesitan atención. Esto evita que el procesador
+                    tenga que esperar constantemente y mejora el rendimiento general del sistema.</p>
+                <p><strong>Dicho de otra manera:</strong> El dispositivo le avisa al procesador cuando necesita atención o
+                    termina una tarea.</p>
+            </div>
+            <div style="flex: 1; min-width: 300px; text-align: center;">
+                <img src="assets/Unidad1/1.4 E-S MEDIANTE INTERRUPCIONES.png" alt="E/S Mediante Interrupciones"
+                    style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+            </div>
+        </div>
+
+        <!-- 1.5 -->
+        <h2>1.5 Acceso Directo a Memoria (DMA)</h2>
+        <p><strong>Definición:</strong> El Acceso Directo a Memoria, conocido como DMA (Direct Memory Access), es un mecanismo utilizado en la arquitectura de computadoras que permite transferir datos directamente entre los dispositivos de entrada/salida y la memoria RAM sin que la CPU tenga que intervenir constantemente en el proceso. Gracias a este método, el procesador puede continuar ejecutando otras tareas mientras la transferencia de información se realiza de manera automática, mejorando considerablemente el rendimiento y eficiencia del sistema.<br><br>El DMA es muy utilizado en dispositivos que manejan grandes cantidades de información, como discos duros, tarjetas de red, audio y video, ya que reduce la carga de trabajo del procesador y acelera la transferencia de datos.</p>
+        <p><strong>En pocas palabras:</strong> Permite mover datos entre dispositivos y memoria sin usar constantemente el procesador.</p>
+        <div style="text-align: center; margin: 2rem 0;">
+            <img src="assets/Unidad1/1.5 DMA.png" alt="Acceso Directo a Memoria (DMA)"
+                style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+        </div>
+
+        <!-- 1.6 -->
+        <h2>1.6 Buses</h2>
+        <p><strong>Definición:</strong> Los buses del sistema son estructuras de comunicación utilizadas para transferir
+            datos, direcciones y señales de control entre los diferentes componentes internos de la computadora. Son
+            esenciales para el funcionamiento del sistema, ya que permiten la interacción entre la CPU, la memoria y los
+            dispositivos periféricos.</p>
+        <p><strong>En pocas palabras:</strong> Son canales que conectan todos los componentes de la computadora.</p>
+
+        <h3>Tipos de Buses</h3>
+        <p><strong>Definición:</strong> Existen distintos tipos de buses dependiendo de la información que transportan y
+            su función dentro del sistema. Los principales son el bus de datos, encargado de transferir información; el
+            bus de direcciones, utilizado para indicar ubicaciones de memoria; y el bus de control, que coordina las
+            operaciones del sistema.</p>
+        <p><strong>Más sencillo:</strong> Cada tipo de bus tiene una función específica dentro de la computadora.</p>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; margin-bottom: 2rem;">
+            <div style="flex: 1; min-width: 300px;">
+                <h3>Estructura</h3>
+                <p><strong>Definición:</strong> La estructura de buses define la forma en que están organizadas las conexiones y
+                    rutas de comunicación dentro del sistema informático. Esta organización influye directamente en la velocidad
+                    y eficiencia de transferencia de datos entre los componentes.</p>
+                <p><strong>De forma simple:</strong> Es la manera en que los buses están organizados y conectados.</p>
+            </div>
+            <div style="flex: 1; min-width: 300px; text-align: center;">
+                <img src="assets/Unidad1/1.6 ESTRUCTURA.png" alt="Estructura de Buses"
+                    style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+            </div>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; margin-bottom: 2rem;">
+            <div style="flex: 1; min-width: 300px;">
+                <h3>Jerarquía</h3>
+                <p><strong>Definición:</strong> La jerarquía de buses organiza los diferentes buses del sistema según su
+                    velocidad, prioridad y función. Algunos buses trabajan directamente con la CPU y otros se encargan de
+                    conectar dispositivos secundarios o periféricos.</p>
+                <p><strong>En pocas palabras:</strong> Organiza los buses según su importancia y velocidad.</p>
+            </div>
+            <div style="flex: 1; min-width: 300px; text-align: center;">
+                <img src="assets/Unidad1/1.6 JERARQUÍA.png" alt="Jerarquía de Buses"
+                    style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+            </div>
+        </div>
+
+        <!-- 1.7 -->
+        <h2>1.7 Interrupciones</h2>
+        <p><strong>Definición:</strong> Las interrupciones son señales que provocan que la CPU detenga temporalmente la
+            ejecución normal de un programa para atender un evento importante generado por hardware o software. Este
+            mecanismo permite responder rápidamente a situaciones como la entrada de datos, errores del sistema o
+            solicitudes de dispositivos periféricos.</p>
+        <p><strong>En términos simples:</strong> Son avisos que hacen que la CPU atienda algo urgente antes de continuar
+            trabajando.</p>
+
+        <h3>Técnica de Poleo (Polling)</h3>
+        <p><strong>Definición:</strong> La técnica de poleo o polling es un método utilizado por la CPU para revisar constantemente el estado de los dispositivos de entrada y salida con el objetivo de detectar si alguno necesita atención o si una operación ha finalizado. En este método, el procesador consulta repetidamente cada dispositivo mediante ciclos de revisión continuos.<br><br>Aunque es una técnica sencilla de implementar, puede consumir recursos importantes del procesador, ya que la CPU dedica tiempo a supervisar dispositivos incluso cuando estos no requieren atención inmediata.</p>
+        <p><strong>En pocas palabras:</strong> La CPU revisa continuamente los dispositivos para saber si necesitan realizar alguna operación.</p>
+
+        <h3>Sincronización E/S (Entrada y Salida)</h3>
+        <p><strong>Definición:</strong> La sincronización de Entrada y Salida (E/S) es el mecanismo encargado de coordinar la comunicación entre la CPU y los dispositivos periféricos para garantizar que el intercambio de información se realice correctamente. Debido a que los dispositivos de entrada y salida trabajan a velocidades distintas al procesador, es necesario utilizar métodos de sincronización que permitan evitar errores o pérdida de datos.<br><br>La sincronización E/S permite que la transferencia de información se realice de manera ordenada y eficiente dentro del sistema computacional.</p>
+        <p><strong>Más sencillo:</strong> Coordina la comunicación entre la CPU y los dispositivos de entrada y salida para evitar errores y mejorar el funcionamiento del sistema.</p>
+
+        <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 3rem 0;">
+
+        <h2>Conclusión de la Unidad 1</h2>
+        <p>La arquitectura de computadoras es una parte fundamental de los sistemas informáticos, ya que permite comprender cómo se organizan y comunican los componentes internos de una computadora para ejecutar instrucciones y procesar información. A través del estudio de los modelos de arquitectura, la CPU, las memorias, los buses, los módulos de entrada y salida, el acceso directo a memoria y las interrupciones, es posible entender el funcionamiento general de los sistemas de cómputo modernos.</p>
+        <p>Cada uno de estos elementos cumple una función importante dentro del sistema, trabajando de manera coordinada para garantizar un procesamiento eficiente, rápido y estable. Además, el desarrollo de nuevas tecnologías en arquitectura de computadoras ha permitido mejorar significativamente el rendimiento y capacidad de los equipos actuales, haciendo posible ejecutar aplicaciones cada vez más complejas en distintos ámbitos tecnológicos, científicos y empresariales.</p>
+
+        <h2>Referencias</h2>
+        <div style="display: flex; gap: 2rem; margin-top: 2rem; margin-bottom: 2rem;">
+            <a href="assets/PresentaciónUnidad1.pptx" target="_blank" class="module-card" style="flex: 1; max-width: 400px; text-align: center;">
+                <h3 style="margin-top: 0;"><i class="fa-solid fa-file-powerpoint"></i> Presentación de la Unidad 1</h3>
+                <p style="margin-bottom: 0;">Haz clic para descargar o visualizar la presentación de esta unidad.</p>
+            </a>
+        </div>
+
+        <footer style="text-align: center; margin-top: 5rem; padding: 2rem 0; border-top: 1px solid rgba(255,255,255,0.1); color: var(--text-secondary);">
+            <p>Contacto: <a href="mailto:Joeleliud15@gmail.com" style="color: var(--primary-color); text-decoration: none;">Joeleliud15@gmail.com</a></p>
+        </footer>
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
+
+
+

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arquitectura de Computadoras</title>
+    <!-- SEO Best Practices -->
+    <meta name="description" content="Temario y material de estudio de Arquitectura de Computadoras. Aprende sobre sistemas de cómputo, procesadores, memoria y más.">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="sidebar-collapsed">
+    <!-- Toggle Button -->
+    <button id="sidebar-toggle" class="sidebar-toggle-btn" aria-label="Toggle Sidebar">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar" id="sidebar">
+        <img src="assets/Inicio/LOGO-TECNM.png" alt="TecNM Logo" style="position: absolute; top: 1.5rem; left: 1.5rem; width: 200px; filter: drop-shadow(0 2px 5px rgba(255,255,255,0.1));">
+        <div class="sidebar-header" style="margin-top: 5rem;">
+            <h2>Arquitectura de computadoras</h2>
+            <span>Instituto Tecnológico de Saltillo</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active"><i class="fa-solid fa-house"></i> Inicio</a></li>
+            <li><a href="unidad1.html"><i class="fa-solid fa-microchip"></i> Unidad 1</a></li>
+            <li><a href="unidad2.html"><i class="fa-solid fa-memory"></i> Unidad 2</a></li>
+            <li><a href="unidad3.html"><i class="fa-solid fa-network-wired"></i> Unidad 3</a></li>
+            <li><a href="unidad4.html"><i class="fa-solid fa-server"></i> Unidad 4</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content" id="main-content">
+        <!-- Hero Section -->
+        <div class="hero-section" style="text-align: center; margin-bottom: 4rem;">
+            <h1 style="font-size: 3.5rem; margin-bottom: 1rem;"><span class="text-gradient">Arquitectura de Computadoras</span></h1>
+            <p style="font-size: 1.15rem; max-width: 900px; margin: 0 auto 2rem auto; color: var(--text-secondary); line-height: 1.6;">Página web del <strong>Proyecto Final</strong> de la materia Arquitectura de Computadoras del semestre <strong>Ene - Jun 2026</strong>. Hecha por <strong>Joel Eliud Carranza Espinoza</strong>, alumno de 4to semestre de la <strong>Ing. en Sistemas Computacionales</strong>, con el objetivo de reforzar y practicar lo conocido sobre programación web.</p>
+            
+            <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 1.5rem;">
+                <img src="assets/Inicio/ITS.png" alt="ITS Logo" style="height: 120px; object-fit: contain; filter: drop-shadow(0 4px 10px rgba(255,255,255,0.1));">
+            </div>
+
+            <div style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
+                <a href="https://saltillo.tecnm.mx/" target="_blank" class="hero-btn portal-btn"><i class="fa-solid fa-globe"></i> Portal Oficial</a>
+                <a href="https://www.facebook.com/TecNMcampusSaltillo/" target="_blank" class="hero-btn fb-btn"><i class="fa-brands fa-facebook"></i> Facebook</a>
+            </div>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 3rem; margin-top: 2rem;">
+            <!-- Columna de Unidades -->
+            <div style="flex: 1; min-width: 300px;">
+                <h2 style="text-align: center; border: none; margin-bottom: 2rem;">Unidades</h2>
+                <div class="module-grid">
+                    <a href="unidad1.html" class="module-card" style="min-height: 180px; display: flex; flex-direction: column; justify-content: center;">
+                        <h3 style="margin-top: 0;">Unidad 1</h3>
+                        <p style="margin-bottom: 0;">Conceptos básicos, evolución de las computadoras y estructura fundamental del hardware.</p>
+                    </a>
+                    <a href="unidad2.html" class="module-card" style="min-height: 180px; display: flex; flex-direction: column; justify-content: center;">
+                        <h3 style="margin-top: 0;">Unidad 2</h3>
+                        <p style="margin-bottom: 0;">La Unidad Central de Procesamiento (CPU), arquitectura de conjunto de instrucciones y diseño del procesador.</p>
+                    </a>
+                    <a href="unidad3.html" class="module-card" style="min-height: 180px; display: flex; flex-direction: column; justify-content: center;">
+                        <h3 style="margin-top: 0;">Unidad 3</h3>
+                        <p style="margin-bottom: 0;">Jerarquía de memoria, memoria caché, memoria principal y almacenamiento secundario.</p>
+                    </a>
+                    <a href="unidad4.html" class="module-card" style="min-height: 180px; display: flex; flex-direction: column; justify-content: center;">
+                        <h3 style="margin-top: 0;">Unidad 4</h3>
+                        <p style="margin-bottom: 0;">Sistemas de Entrada/Salida, buses del sistema y arquitecturas de procesadores avanzados.</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Columna de Prácticas -->
+            <div style="flex: 1; min-width: 300px;">
+                <h2 style="text-align: center; border: none; margin-bottom: 2rem;">Prácticas</h2>
+                <div class="module-grid">
+                    <a href="assets/reporte%20practica%201.pdf" target="_blank" class="module-card" style="min-height: 180px; display: flex; flex-direction: column; justify-content: center;">
+                        <h3 style="margin-top: 0;"><i class="fa-solid fa-file-pdf"></i> Práctica 1</h3>
+                        <p style="margin-bottom: 0;">Reporte de la Práctica 1. Haz clic para abrir el archivo PDF y ver los detalles.</p>
+                    </a>
+                    <a href="assets/reporte%20practica%202.pdf" target="_blank" class="module-card" style="min-height: 180px; display: flex; flex-direction: column; justify-content: center;">
+                        <h3 style="margin-top: 0;"><i class="fa-solid fa-file-pdf"></i> Práctica 2</h3>
+                        <p style="margin-bottom: 0;">Reporte de la Práctica 2. Haz clic para abrir el archivo PDF y ver los detalles.</p>
+                    </a>
+                    <a href="assets/reporte%20practica%203.pdf" target="_blank" class="module-card" style="min-height: 180px; display: flex; flex-direction: column; justify-content: center;">
+                        <h3 style="margin-top: 0;"><i class="fa-solid fa-file-pdf"></i> Práctica 3</h3>
+                        <p style="margin-bottom: 0;">Reporte de la Práctica 3. Haz clic para abrir el archivo PDF y ver los detalles.</p>
+                    </a>
+                    <a href="assets/reporte%20practica%204.pdf" target="_blank" class="module-card" style="min-height: 180px; display: flex; flex-direction: column; justify-content: center;">
+                        <h3 style="margin-top: 0;"><i class="fa-solid fa-file-pdf"></i> Práctica 4</h3>
+                        <p style="margin-bottom: 0;">Reporte de la Práctica 4. Haz clic para abrir el archivo PDF y ver los detalles.</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top: 4rem; padding: 2.5rem; background: var(--surface-color-glass); border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+            <h2 style="text-align: center; border: none; margin-top: 0; color: var(--primary-color);">Rúbrica de Evaluación</h2>
+            <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 4rem; margin-top: 2rem;">
+                <div style="text-align: center; flex: 1; max-width: 300px; background: rgba(0,0,0,0.2); padding: 2rem; border-radius: 12px; border: 1px solid rgba(102, 252, 241, 0.2);">
+                    <div style="font-size: 3.5rem; font-weight: 800; color: #00ffcc; margin-bottom: 0.5rem; text-shadow: 0 0 15px rgba(0, 255, 204, 0.4);">60%</div>
+                    <h3 style="margin-top: 0; color: var(--text-primary);">Proyecto Final</h3>
+                    <p style="margin-bottom: 0;">Desarrollo de la Página Web</p>
+                </div>
+                <div style="text-align: center; flex: 1; max-width: 300px; background: rgba(0,0,0,0.2); padding: 2rem; border-radius: 12px; border: 1px solid rgba(102, 252, 241, 0.2);">
+                    <div style="font-size: 3.5rem; font-weight: 800; color: #00ffcc; margin-bottom: 0.5rem; text-shadow: 0 0 15px rgba(0, 255, 204, 0.4);">40%</div>
+                    <h3 style="margin-top: 0; color: var(--text-primary);">Exámenes y Prácticas</h3>
+                    <p style="margin-bottom: 0;">Evaluación Continua</p>
+                </div>
+            </div>
+        </div>
+
+        <h2 style="text-align: center; border: none; margin-top: 4rem; margin-bottom: 2rem;">Tareas</h2>
+        <div class="module-grid">
+            <a href="assets/Diseño%20de%20equipos%20de%20computo%20(1).pdf" target="_blank" class="module-card" style="min-height: 180px; display: flex; flex-direction: column; justify-content: center;">
+                <h3 style="margin-top: 0;"><i class="fa-solid fa-file-pdf"></i> Tarea 1</h3>
+                <p style="margin-bottom: 0;">Haz clic para abrir el archivo PDF con los detalles de la Tarea 1.</p>
+            </a>
+            <a href="assets/Gamas%20de%20equipos%20de%20computo.pdf" target="_blank" class="module-card" style="min-height: 180px; display: flex; flex-direction: column; justify-content: center;">
+                <h3 style="margin-top: 0;"><i class="fa-solid fa-file-pdf"></i> Tarea 2</h3>
+                <p style="margin-bottom: 0;">Haz clic para abrir el archivo PDF con los detalles de la Tarea 2.</p>
+            </a>
+            <a href="assets/PROCESADORES-1.pdf" target="_blank" class="module-card" style="min-height: 180px; display: flex; flex-direction: column; justify-content: center;">
+                <h3 style="margin-top: 0;"><i class="fa-solid fa-file-pdf"></i> Tarea 3</h3>
+                <p style="margin-bottom: 0;">Haz clic para abrir el archivo PDF con los detalles de la Tarea 3.</p>
+            </a>
+            <a href="assets/TareaCotizaciónDeEquipos.pdf" target="_blank" class="module-card" style="min-height: 180px; display: flex; flex-direction: column; justify-content: center;">
+                <h3 style="margin-top: 0;"><i class="fa-solid fa-file-pdf"></i> Tarea 4</h3>
+                <p style="margin-bottom: 0;">Haz clic para abrir el archivo PDF con los detalles de la Tarea 4.</p>
+            </a>
+        </div>
+
+        <h2 style="text-align: center; border: none; margin-top: 4rem; margin-bottom: 2rem;">Presentaciones</h2>
+        <div class="module-grid" style="grid-template-columns: repeat(2, 1fr);">
+            <a href="assets/PresentaciónUnidad1.pptx" target="_blank" class="module-card" style="min-height: 180px; display: flex; flex-direction: column; justify-content: center;">
+                <h3 style="margin-top: 0;"><i class="fa-solid fa-file-powerpoint"></i> Presentación UNIDAD 1</h3>
+                <p style="margin-bottom: 0;">Haz clic para descargar o visualizar la presentación de la Unidad 1.</p>
+            </a>
+            <a href="assets/PresentaciónUnidad2.pdf" target="_blank" class="module-card" style="min-height: 180px; display: flex; flex-direction: column; justify-content: center;">
+                <h3 style="margin-top: 0;"><i class="fa-solid fa-file-pdf"></i> Presentación UNIDAD 2</h3>
+                <p style="margin-bottom: 0;">Haz clic para descargar o visualizar la presentación de la Unidad 2.</p>
+            </a>
+            <a href="assets/PresentaciónUnidad3.pdf" target="_blank" class="module-card" style="min-height: 180px; display: flex; flex-direction: column; justify-content: center;">
+                <h3 style="margin-top: 0;"><i class="fa-solid fa-file-pdf"></i> Presentación UNIDAD 3</h3>
+                <p style="margin-bottom: 0;">Haz clic para descargar o visualizar la presentación de la Unidad 3.</p>
+            </a>
+            <a href="assets/PresentacionUnidad4.pptx" target="_blank" class="module-card" style="min-height: 180px; display: flex; flex-direction: column; justify-content: center;">
+                <h3 style="margin-top: 0;"><i class="fa-solid fa-file-powerpoint"></i> Presentación UNIDAD 4</h3>
+                <p style="margin-bottom: 0;">Haz clic para descargar o visualizar la presentación de la Unidad 4.</p>
+            </a>
+        </div>
+
+        <footer style="text-align: center; margin-top: 5rem; padding: 2rem 0; border-top: 1px solid rgba(255,255,255,0.1); color: var(--text-secondary);">
+            <p>Contacto: <a href="mailto:Joeleliud15@gmail.com" style="color: var(--primary-color); text-decoration: none;">Joeleliud15@gmail.com</a></p>
+        </footer>
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
+
+
+
+
+

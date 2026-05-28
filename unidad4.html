@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad 4 - Arquitectura de Computadoras</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="sidebar-collapsed">
+    <!-- Toggle Button -->
+    <button id="sidebar-toggle" class="sidebar-toggle-btn" aria-label="Toggle Sidebar">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar" id="sidebar">
+        <img src="assets/Inicio/LOGO-TECNM.png" alt="TecNM Logo" style="position: absolute; top: 1.5rem; left: 1.5rem; width: 200px; filter: drop-shadow(0 2px 5px rgba(255,255,255,0.1));">
+        <div class="sidebar-header" style="margin-top: 5rem;">
+            <h2>Arquitectura de computadoras</h2>
+            <span>Instituto Tecnológico de Saltillo</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a></li>
+            <li><a href="unidad1.html"><i class="fa-solid fa-microchip"></i> Unidad 1</a></li>
+            <li><a href="unidad2.html"><i class="fa-solid fa-memory"></i> Unidad 2</a></li>
+            <li><a href="unidad3.html"><i class="fa-solid fa-network-wired"></i> Unidad 3</a></li>
+            <li><a href="unidad4.html" class="active"><i class="fa-solid fa-server"></i> Unidad 4</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content" id="main-content">
+        <h1>Unidad 4: <span class="text-gradient">Procesamiento Paralelo</span></h1>
+
+        <!-- Introducción -->
+        <p><strong>Introducción:</strong> El procesamiento paralelo es una técnica utilizada en arquitectura de computadoras que permite ejecutar múltiples operaciones o tareas de manera simultánea utilizando varios procesadores o núcleos de procesamiento. Este modelo surge como una solución a las limitaciones de velocidad presentes en las arquitecturas secuenciales tradicionales, permitiendo mejorar considerablemente el rendimiento y eficiencia de los sistemas informáticos. Actualmente, el procesamiento paralelo es fundamental en áreas como inteligencia artificial, simulaciones científicas, videojuegos, servidores, análisis de datos y supercomputadoras, donde se requiere procesar grandes cantidades de información en el menor tiempo posible.</p>
+
+        <!-- 4.1 -->
+        <h2>4.1 Aspectos Básicos de la Computación Paralela</h2>
+        <p><strong>Definición:</strong> La computación paralela es una forma de procesamiento en la que un problema complejo se divide en varias tareas más pequeñas que pueden ejecutarse simultáneamente utilizando múltiples procesadores, núcleos o computadoras. Este enfoque permite reducir tiempos de ejecución, mejorar el rendimiento del sistema y aprovechar mejor los recursos del hardware. A diferencia de la computación secuencial, donde las instrucciones se ejecutan una tras otra, en la computación paralela varias operaciones pueden realizarse al mismo tiempo, incrementando la eficiencia en aplicaciones que requieren gran capacidad de cálculo.</p>
+        <p><strong>En pocas palabras:</strong> Consiste en realizar varias operaciones al mismo tiempo utilizando múltiples procesadores para trabajar más rápido.</p>
+
+        <h3>Objetivo del Procesamiento Paralelo</h3>
+        <p><strong>Definición:</strong> El principal objetivo del procesamiento paralelo es aumentar la velocidad y capacidad de procesamiento de los sistemas informáticos mediante la ejecución simultánea de tareas. Gracias a este modelo, es posible resolver problemas complejos en menos tiempo y manejar aplicaciones que requieren grandes cantidades de datos o cálculos intensivos. Además, permite aprovechar mejor el hardware moderno, especialmente procesadores multinúcleo y sistemas multiprocesador.</p>
+        <p><strong>Más sencillo:</strong> Busca mejorar el rendimiento de la computadora haciendo varias tareas al mismo tiempo.</p>
+
+        <h3>Paralelismo de Datos</h3>
+        <p><strong>Definición:</strong> El paralelismo de datos es un tipo de procesamiento paralelo en el que una misma operación o conjunto de instrucciones se aplica simultáneamente sobre diferentes bloques de datos. Este modelo es ampliamente utilizado en procesamiento de imágenes, gráficos, simulaciones y aprendizaje automático, donde enormes cantidades de información necesitan procesarse rápidamente. Gracias a este enfoque, el sistema puede distribuir la carga de trabajo entre varios procesadores para obtener mejores resultados de rendimiento.</p>
+        <p><strong>En términos simples:</strong> Se realizan las mismas operaciones sobre muchos datos al mismo tiempo.</p>
+
+        <h3>Paralelismo de Tareas</h3>
+        <p><strong>Definición:</strong> El paralelismo de tareas divide un programa en diferentes procesos independientes que pueden ejecutarse simultáneamente utilizando varios procesadores. Cada procesador trabaja en una tarea distinta, permitiendo aumentar la productividad y eficiencia del sistema. Este tipo de paralelismo es común en sistemas operativos multitarea, servidores y aplicaciones complejas.</p>
+        <p><strong>Dicho de otra manera:</strong> Cada procesador realiza tareas diferentes simultáneamente.</p>
+
+        <h3>Ventajas de la Computación Paralela</h3>
+        <p><strong>Definición:</strong> La computación paralela ofrece múltiples ventajas como reducción del tiempo de procesamiento, mejor aprovechamiento del hardware, capacidad para manejar grandes cantidades de datos y mayor eficiencia energética. Además, permite desarrollar aplicaciones más complejas y potentes que serían difíciles de ejecutar en sistemas secuenciales tradicionales.</p>
+        <p><strong>En pocas palabras:</strong> Permite que las computadoras sean más rápidas, eficientes y capaces de manejar tareas complejas.</p>
+
+        <h3>Desventajas de la Computación Paralela</h3>
+        <p><strong>Definición:</strong> A pesar de sus ventajas, la computación paralela también presenta desafíos relacionados con sincronización, comunicación entre procesadores y complejidad de programación. Diseñar programas paralelos eficientes puede ser más difícil debido a la necesidad de coordinar múltiples tareas ejecutándose simultáneamente.</p>
+        <p><strong>Más sencillo:</strong> Programar sistemas paralelos puede ser más complicado y requiere buena coordinación entre procesadores.</p>
+
+        <!-- 4.2 -->
+        <h2>4.2 Tipos de Computación Paralela</h2>
+        <p><strong>Definición:</strong> Existen distintos tipos de computación paralela dependiendo de cómo se organizan los procesadores, la memoria y la ejecución de instrucciones. Estas arquitecturas permiten adaptar el sistema a diferentes necesidades de rendimiento, capacidad de procesamiento y manejo de datos. Algunos modelos se enfocan en ejecutar una misma instrucción sobre muchos datos, mientras que otros permiten ejecutar múltiples instrucciones independientes al mismo tiempo.</p>
+        <p><strong>En pocas palabras:</strong> Hay distintas formas de organizar sistemas que trabajan de manera paralela.</p>
+
+        <h3>4.2.1 Clasificación</h3>
+        <p><strong>Definición:</strong> La clasificación de las arquitecturas paralelas se basa en la manera en que los procesadores manejan instrucciones y datos. Una de las clasificaciones más conocidas es la taxonomía de Flynn, la cual divide los sistemas informáticos en arquitecturas secuenciales y paralelas según el flujo de instrucciones y datos que utilizan durante el procesamiento.</p>
+        <p><strong>En términos simples:</strong> Clasifica las computadoras según cómo procesan datos e instrucciones.</p>
+
+        <h4>SISD</h4>
+        <p><strong>Definición:</strong> La arquitectura SISD (Single Instruction Single Data) corresponde a los sistemas secuenciales tradicionales, donde un único procesador ejecuta una sola instrucción sobre un único conjunto de datos a la vez. Este modelo fue utilizado ampliamente en las primeras generaciones de computadoras y aún se emplea en dispositivos simples o tareas básicas.</p>
+        <p><strong>Más sencillo:</strong> Un procesador realiza una sola tarea utilizando un conjunto de datos a la vez.</p>
+
+        <h4>SIMD</h4>
+        <p><strong>Definición:</strong> La arquitectura SIMD (Single Instruction Multiple Data) utiliza una sola instrucción para procesar múltiples datos simultáneamente. Este modelo es muy utilizado en procesamiento gráfico, multimedia y aplicaciones científicas, ya que permite ejecutar operaciones repetitivas sobre grandes cantidades de datos de forma eficiente.</p>
+        <p><strong>En pocas palabras:</strong> Una instrucción trabaja al mismo tiempo sobre muchos datos diferentes.</p>
+
+        <h4>MISD</h4>
+        <p><strong>Definición:</strong> La arquitectura MISD (Multiple Instruction Single Data) permite que múltiples instrucciones diferentes se ejecuten sobre un mismo conjunto de datos. Aunque es poco común en sistemas comerciales, este modelo puede utilizarse en sistemas especializados donde se requiere alta tolerancia a fallos y procesamiento redundante.</p>
+        <p><strong>Más sencillo:</strong> Varias operaciones diferentes trabajan sobre los mismos datos.</p>
+
+        <h4>MIMD</h4>
+        <p><strong>Definición:</strong> La arquitectura MIMD (Multiple Instruction Multiple Data) es uno de los modelos más utilizados actualmente en sistemas multiprocesador y supercomputadoras. En este tipo de arquitectura, múltiples procesadores ejecutan diferentes instrucciones utilizando distintos conjuntos de datos de manera simultánea. Cada procesador puede trabajar de forma independiente, permitiendo ejecutar tareas complejas de forma más eficiente.</p>
+        <p><strong>Dicho de otra manera:</strong> Muchos procesadores realizan distintas tareas al mismo tiempo usando diferentes datos.</p>
+
+        <h3>4.2.2 Arquitectura de Computadoras Secuenciales</h3>
+        <p><strong>Definición:</strong> Las computadoras secuenciales son sistemas que ejecutan instrucciones una tras otra utilizando un único procesador principal. Este modelo sigue el ciclo tradicional de búsqueda, decodificación y ejecución de instrucciones de forma lineal. Aunque son más simples de diseñar y programar, presentan limitaciones importantes en aplicaciones que requieren gran capacidad de procesamiento.</p>
+        <p><strong>En pocas palabras:</strong> Las instrucciones se ejecutan una por una y en orden.</p>
+
+        <h4>Funcionamiento Secuencial</h4>
+        <p><strong>Definición:</strong> En una arquitectura secuencial, el procesador realiza una sola operación a la vez siguiendo una secuencia estricta de instrucciones. Cada tarea debe finalizar antes de comenzar la siguiente, lo que puede generar tiempos de espera y menor rendimiento en procesos complejos.</p>
+        <p><strong>Más sencillo:</strong> La computadora procesa tareas individualmente sin trabajar simultáneamente.</p>
+
+        <h4>Limitaciones</h4>
+        <p><strong>Definición:</strong> Las arquitecturas secuenciales presentan limitaciones relacionadas con velocidad, rendimiento y capacidad de procesamiento. A medida que las aplicaciones modernas requieren manejar más datos y operaciones simultáneas, este tipo de sistemas resulta menos eficiente comparado con las arquitecturas paralelas.</p>
+        <p><strong>En términos simples:</strong> Pueden volverse lentas para tareas complejas o grandes cantidades de datos.</p>
+
+        <h3>4.2.3 Organización de Direcciones de Memoria</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; margin-bottom: 2rem;">
+            <div style="flex: 1; min-width: 300px;">
+                <p><strong>Definición:</strong> La organización de direcciones de memoria define cómo los datos son almacenados, localizados y compartidos dentro de un sistema computacional. En los sistemas paralelos, este aspecto es especialmente importante debido a que múltiples procesadores pueden necesitar acceder a la memoria al mismo tiempo.</p>
+                <p><strong>En pocas palabras:</strong> Organiza la manera en que los datos se guardan y localizan dentro de la memoria.</p>
+            </div>
+            <div style="flex: 1; min-width: 300px; text-align: center;">
+                <img src="assets/Unidad%204/4.2.3%20U2S2-Memoria-Principal-RAM-21-320.webp" alt="Organización de Direcciones de Memoria" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+            </div>
+        </div>
+
+        <h4>Memoria Compartida</h4>
+        <p><strong>Definición:</strong> En los sistemas de memoria compartida, todos los procesadores acceden a un mismo espacio de memoria principal. Esto facilita el intercambio de información y simplifica la comunicación entre procesadores, aunque también puede generar conflictos cuando varios intentan acceder simultáneamente a los mismos datos.</p>
+        <p><strong>Más sencillo:</strong> Todos los procesadores utilizan la misma memoria para compartir información.</p>
+
+        <h4>Memoria Distribuida</h4>
+        <p><strong>Definición:</strong> En los sistemas de memoria distribuida, cada procesador posee su propia memoria local independiente. La comunicación entre procesadores se realiza mediante redes de interconexión y envío de mensajes, permitiendo construir sistemas escalables y de gran capacidad de procesamiento.</p>
+        <p><strong>De forma simple:</strong> Cada procesador tiene su propia memoria y se comunica mediante redes.</p>
+
+        <!-- 4.3 -->
+        <h2>4.3 Sistemas de Memoria Compartida (Multiprocesadores)</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; margin-bottom: 2rem;">
+            <div style="flex: 1; min-width: 300px;">
+                <p><strong>Definición:</strong> Un sistema multiprocesador de memoria compartida consiste en una arquitectura donde todos los procesadores del sistema tienen acceso a un mismo espacio de memoria global. Cualquier cambio realizado por un procesador en la memoria es visible inmediatamente para los demás procesadores del sistema.</p>
+                <p><strong>En pocas palabras:</strong> Todos los procesadores utilizan y comparten la misma memoria principal.</p>
+            </div>
+            <div style="flex: 1; min-width: 300px; text-align: center;">
+                <img src="assets/Unidad%204/4.3%20memoria_compartida.webp" alt="Memoria Compartida" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+            </div>
+        </div>
+
+        <h3>Ventajas de Memoria Compartida</h3>
+        <p><strong>Definición:</strong> La memoria compartida facilita el intercambio rápido de información entre procesadores y simplifica el desarrollo de aplicaciones paralelas. Además, reduce el tiempo de comunicación entre procesos y mejora el rendimiento general del sistema.</p>
+        <p><strong>Más sencillo:</strong> Permite compartir información rápidamente entre procesadores.</p>
+
+        <h3>Desventajas de Memoria Compartida</h3>
+        <p><strong>Definición:</strong> Uno de los principales problemas de la memoria compartida es la posibilidad de conflictos cuando varios procesadores intentan acceder simultáneamente a los mismos datos. Además, conforme aumenta el número de procesadores, el rendimiento puede verse afectado por la saturación de la memoria compartida.</p>
+        <p><strong>En términos simples:</strong> Muchos procesadores usando la misma memoria pueden generar conflictos y lentitud.</p>
+
+        <h3>4.3.1 Redes de Interconexión Dinámica (Indirecta)</h3>
+        <p><strong>Definición:</strong> Las redes de interconexión dinámica permiten conectar procesadores y memoria mediante rutas variables que pueden cambiar según las necesidades del sistema. Estas redes mejoran la flexibilidad y eficiencia de comunicación en arquitecturas paralelas complejas.</p>
+        <p><strong>Más sencillo:</strong> Las conexiones cambian dinámicamente para mejorar la comunicación entre componentes.</p>
+
+        <h4>Medio Compartido</h4>
+        <p><strong>Definición:</strong> El medio compartido utiliza un único canal de comunicación para permitir que varios dispositivos intercambien información. Este modelo es sencillo de implementar, aunque puede presentar problemas de congestión cuando muchos dispositivos intentan comunicarse simultáneamente.</p>
+        <p><strong>En pocas palabras:</strong> Todos los dispositivos utilizan el mismo canal de comunicación.</p>
+
+        <h4>Redes Conmutadas</h4>
+        <p><strong>Definición:</strong> Las redes conmutadas utilizan dispositivos especializados llamados switches para dirigir la información entre procesadores y memoria mediante rutas específicas. Este enfoque mejora la velocidad y reduce conflictos de comunicación.</p>
+        <p><strong>Más sencillo:</strong> Los datos se envían por rutas específicas usando conmutadores.</p>
+
+        <!-- 4.4 -->
+        <h2>4.4 Sistemas de Memoria Distribuida Multicomputadores</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; margin-bottom: 2rem;">
+            <div style="flex: 1; min-width: 300px;">
+                <p><strong>Definición:</strong> Los sistemas de memoria distribuida están formados por múltiples computadoras o procesadores independientes, cada uno con su propia memoria local. La comunicación entre ellos se realiza mediante redes de interconexión.</p>
+                <p><strong>En pocas palabras:</strong> Son sistemas donde cada computadora tiene su propia memoria.</p>
+            </div>
+            <div style="flex: 1; min-width: 300px; text-align: center;">
+                <img src="assets/Unidad%204/4.4%20.webp" alt="Memoria Distribuida" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+            </div>
+        </div>
+
+        <h3>Comunicación entre Procesadores</h3>
+        <p><strong>Definición:</strong> En los sistemas distribuidos, los procesadores intercambian información mediante envío de mensajes a través de redes de comunicación.</p>
+        <p><strong>Más sencillo:</strong> Los procesadores se comunican enviándose información.</p>
+
+        <h3>Ventajas de Memoria Distribuida</h3>
+        <p><strong>Definición:</strong> Estos sistemas ofrecen gran capacidad de expansión y permiten agregar más procesadores sin afectar significativamente el funcionamiento general.</p>
+        <p><strong>En términos simples:</strong> Permiten construir sistemas grandes y potentes.</p>
+
+        <h3>Desventajas de Memoria Distribuida</h3>
+        <p><strong>Definición:</strong> La comunicación entre procesadores puede ser más lenta debido al uso de redes, además de requerir mecanismos de sincronización más complejos.</p>
+        <p><strong>Más sencillo:</strong> La comunicación puede ser más complicada y lenta.</p>
+
+        <h3>4.4.1 Redes de Interconexión Estáticas</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; margin-bottom: 2rem;">
+            <div style="flex: 1; min-width: 300px;">
+                <p><strong>Definición:</strong> Las redes de interconexión estáticas utilizan conexiones fijas entre procesadores y dispositivos del sistema. Estas conexiones no cambian durante el funcionamiento del sistema.</p>
+                <p><strong>En pocas palabras:</strong> Las conexiones permanecen siempre iguales.</p>
+            </div>
+            <div style="flex: 1; min-width: 300px; text-align: center;">
+                <img src="assets/Unidad%204/4.4.1%20.webp" alt="Redes de Interconexión Estáticas" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+            </div>
+        </div>
+
+        <h4>Topología en Malla</h4>
+        <p><strong>Definición:</strong> La topología en malla conecta cada nodo con varios nodos vecinos, permitiendo múltiples rutas para el intercambio de información.</p>
+        <p><strong>Más sencillo:</strong> Cada computadora se conecta con varias cercanas.</p>
+
+        <h4>Topología en Anillo</h4>
+        <p><strong>Definición:</strong> La topología en anillo organiza los dispositivos formando un circuito cerrado donde la información circula entre nodos consecutivos.</p>
+        <p><strong>En pocas palabras:</strong> Los dispositivos se conectan formando un círculo.</p>
+
+        <h4>Topología Hipercubo</h4>
+        <p><strong>Definición:</strong> La topología hipercubo utiliza conexiones multidimensionales entre procesadores para reducir tiempos de comunicación y mejorar el rendimiento.</p>
+        <p><strong>Más sencillo:</strong> Es una estructura avanzada utilizada en sistemas paralelos complejos.</p>
+
+        <!-- 4.5 -->
+        <h2>4.5 Casos para Estudio</h2>
+        <p><strong>Definición:</strong> Los casos de estudio permiten analizar diferentes modelos y arquitecturas utilizadas en sistemas de procesamiento paralelo para comprender su funcionamiento, ventajas y aplicaciones dentro de la arquitectura de computadoras.</p>
+        <p><strong>En pocas palabras:</strong> Ayudan a comprender cómo funcionan las arquitecturas paralelas en distintos sistemas.</p>
+
+        <h3>Multiprocesadores</h3>
+        <p><strong>Definición:</strong> Los multiprocesadores utilizan varios procesadores conectados a una memoria compartida para ejecutar múltiples tareas simultáneamente y mejorar el rendimiento del sistema.</p>
+        <p><strong>Más sencillo:</strong> Varios procesadores trabajan juntos utilizando la misma memoria.</p>
+
+        <h3>Multicomputadores</h3>
+        <p><strong>Definición:</strong> Los multicomputadores están formados por computadoras independientes conectadas mediante redes de comunicación, donde cada una posee su propia memoria local.</p>
+        <p><strong>En términos simples:</strong> Son varias computadoras trabajando juntas mediante redes.</p>
+
+        <h3>Redes de Interconexión</h3>
+        <p><strong>Definición:</strong> Las redes de interconexión permiten la comunicación entre procesadores y memorias dentro de sistemas paralelos, facilitando el intercambio de datos y coordinación de tareas.</p>
+        <p><strong>Más sencillo:</strong> Permiten que los componentes del sistema puedan comunicarse correctamente.</p>
+
+        <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 3rem 0;">
+
+        <h2>Conclusión de la Unidad 4</h2>
+        <p>El procesamiento paralelo representa uno de los mayores avances en la arquitectura de computadoras, permitiendo superar las limitaciones físicas y de velocidad de los sistemas secuenciales tradicionales. Al dividir las tareas complejas y procesarlas de forma simultánea a través de arquitecturas como SIMD y MIMD, se logra un aprovechamiento óptimo de los recursos de hardware.</p>
+        <p>Comprender las diferencias entre memoria compartida y distribuida, así como las topologías de interconexión, es fundamental para diseñar soluciones escalables. Hoy en día, esta tecnología es la base de las supercomputadoras, la inteligencia artificial y los servidores en la nube, demostrando que el futuro de la computación está en la colaboración simultánea de múltiples núcleos trabajando por un objetivo común.</p>
+
+        <h2>Referencias</h2>
+        <div style="display: flex; gap: 2rem; margin-top: 2rem; margin-bottom: 2rem;">
+            <a href="assets/PresentacionUnidad4.pptx" target="_blank" class="module-card" style="flex: 1; max-width: 400px; text-align: center;">
+                <h3 style="margin-top: 0;"><i class="fa-solid fa-file-powerpoint"></i> Presentación de la Unidad 4</h3>
+                <p style="margin-bottom: 0;">Haz clic para descargar o visualizar la presentación de esta unidad.</p>
+            </a>
+        </div>
+
+        <footer style="text-align: center; margin-top: 5rem; padding: 2rem 0; border-top: 1px solid rgba(255,255,255,0.1); color: var(--text-secondary);">
+            <p>Contacto: <a href="mailto:Joeleliud15@gmail.com" style="color: var(--primary-color); text-decoration: none;">Joeleliud15@gmail.com</a></p>
+        </footer>
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
+
+
+
+
+
